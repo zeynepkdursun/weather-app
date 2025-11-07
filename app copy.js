@@ -7,7 +7,7 @@ inputText.addEventListener("keypress", (e) => {
   }
 });
 function deneme(){
-  return 5;
+  return 5555;
 
 }
 
