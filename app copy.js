@@ -6,7 +6,10 @@ inputText.addEventListener("keypress", (e) => {
     getData();
   }
 });
+function deneme(){
+  return 5;
 
+}
 
 function getCity() {
   const cityName = inputText.value;
