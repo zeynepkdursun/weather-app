@@ -1,0 +1,88 @@
+/* CURRENT WEATHER DISPLAY */
+.current-weather {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 250px;
+}
+
+.current-info {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+}
+
+.current-icon {
+  grid-column: 1;
+  width: 100px; height: 100px;
+
+}
+.current-mid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .current-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .current-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .current-mid {
+    grid-template-rows: auto;
+  }
+}
+
+.current-temp {
+  grid-row: 1;
+}
+.current-condition {
+  grid-row: 2;
+}
+
+/* HOURLY WEATHER DISPLAY */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(115, 115, 115);
+  padding: 10px;
+  width: 700px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.hourly-group {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 650px; /* space to show around 6 cards */
+  gap: 10px;
+}
+
+.hour-card {
+  flex: 0 0 100px; /* don’t shrink, width defined by content */
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.hour-time {
+  font-weight: 800;
+}
+
+
+.night {
+  background-image: url("nightIm.jpg");
+}
+
+.day {
+  background-image: url("dayIm.jpg");
+}
