@@ -1,3 +1,10 @@
+.btn{
+  background-color: rgb(225, 221, 221);
+}
+.btn:hover{
+  background-color: rgb(205, 201, 201);
+}
+/* CURRENT WEATHER DISPLAY */
 .header {
   display: flex;
   justify-content: space-between;
@@ -10,7 +17,6 @@
   gap: 10px;
 }
 
-/* CURRENT WEATHER DISPLAY */
 .current-weather {
   background-size: cover;
   background-position: center;
