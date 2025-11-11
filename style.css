@@ -1,3 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.time-info {
+  display: flex;
+  gap: 10px;
+}
+
 /* CURRENT WEATHER DISPLAY */
 .current-weather {
   background-size: cover;
@@ -8,19 +18,25 @@
 
 .current-info {
   display: grid;
-  grid-template-columns: 25% 25% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .current-icon {
   grid-column: 1;
-  width: 100px; height: 100px;
-
+  width: 100px;
+  height: 100px;
 }
 .current-mid {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-
+.current-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*align-items: center;*/
+  padding: 15px;
+}
 @media (max-width: 768px) {
   .current-info {
     grid-template-columns: 1fr;
@@ -46,14 +62,24 @@
   grid-row: 2;
 }
 
+.night {
+  background-image: url("nightImg2.png");
+}
+
+.day {
+  background-image: url("dayImg2.png");
+}
+
 /* HOURLY WEATHER DISPLAY */
 .carousel {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgb(115, 115, 115);
+  background-color: rgb(225, 221, 221);
   padding: 10px;
-  width: 700px;
+  /*max-width: 90%; /* responsive width */
+
+  width: 600px;
   margin: 10px;
   border-radius: 5px;
 }
@@ -76,13 +102,4 @@
 
 .hour-time {
   font-weight: 800;
-}
-
-
-.night {
-  background-image: url("nightIm.jpg");
-}
-
-.day {
-  background-image: url("dayIm.jpg");
 }

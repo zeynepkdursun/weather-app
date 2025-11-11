@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather HTTP Requests</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Weather App</h1>
-    <div class="container p-5" style="background-color: rgb(243, 243, 243);">
-        <div class="row  fs-4">
-            <div class="col text-center">
-                <label for="city-name">Enter a city name</label>
-                <input id="city-name" type="text" >
-                <!-- <button id="get-city" class="btn btn-dark">Get Specific Data</button>   -->
-                <button id="data" class="btn btn-dark fs-5">Get Data</button>  
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container p-5 m-5" style="background-color: rgb(243, 243, 243)">
+      <div class="row fs-4">
+        <div class="col text-center">
+          <label for="city-name">Enter a city name</label>
+          <input id="city-name" type="text" />
+          <!-- <button id="get-city" class="btn btn-dark">Get Specific Data</button>   -->
+          <button id="data" class="btn btn-dark fs-5">Get Data</button>
+        </div>
+        <section
+          id="weather-result"
+          class="current-weather col card"
+          style="display: inline-block"
+        >
+          <!-- Current Weather is gonna be here, inside the elements!!!!!!!!! -->
+          <div class="header mt-3 mb-3 mr-3 ml-5">
+            <h2 class="city-name"></h2>
+            <div class="time-info">
+              <span class="current-day"></span>
+              <span class="current-time"></span>
             </div>
-            <section id="weather-result" class="current-weather col card" style="display:inline-block">
-                <!-- Current Weather is gonna be here, inside the elements!!!!!!!!! -->
-                <h2 class="card-title mt-3 ml-5 text-center"></h2>
-                <div class="current-info card-body">
-                    <img src="" class="current-icon card-img-left mx-3" alt="weather icon">                
-                    <div class="current-mid">
-                        <div class="current-temp"></div>                
-                        <div class="current-condition"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <h2>Hourly Weather</h2>
-    <div id="carousel" class="hourly-list carousel">
-        <button id="carousel-prev" class="btn"><</button>
-        <div id="carousel-container" class="hourly-group">
+          </div>
+          <div class="current-info card-body">
+            <img class="current-icon card-img-left mx-3" alt="weather icon" />
+            <div class="current-mid">
+              <div class="current-temp"></div>
+              <div class="current-condition"></div>
+            </div>
+            <div class="current-details">
+              <div class="current-hi"></div>
+              <div class="current-lo"></div>
+            </div>
+            <div class="deneme"></div>
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <h2>Hourly Weather</h2>
+        <div id="carousel" class="hourly-list carousel">
+          <button id="carousel-prev" class="btn"><</button>
+          <div id="carousel-container" class="hourly-group">
             <!-- Hourly Weather is gonna be here!!!!!!!!! -->
+          </div>
+          <button id="carousel-next" class="btn">></button>
         </div>
-        <button id="carousel-next" class="btn">></button>
+      </div>
     </div>
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-</body>
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
