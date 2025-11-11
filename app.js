@@ -146,5 +146,4 @@ prev.addEventListener("click", () => {
   hourlyWeatherElement.scrollLeft -= cardWidth;
 });
 
-// fix the carousel
 // fix the overflow on the current weather display
